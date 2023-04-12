@@ -49,14 +49,13 @@ class Screen1Fragment : Fragment() {
         return "OK"
     }
 
-    fun LogIn(username: String, password: String): String {
-        if(validateData(username,password) == "OK"){
-            return if(users.any { user -> (user.name == username && user.password == password) })
+    private fun logIn(username: String, password: String): String {
+        return if(validateData(username,password) == "OK"){
+            if(users.any { user -> (user.name == username && user.password == password) })
                 "OK"
             else "User not found"
-        }
-        else {
-            return validateData(username, password)
+        } else {
+            validateData(username, password)
         }
     }
 
@@ -64,7 +63,7 @@ class Screen1Fragment : Fragment() {
         super.onStart()
 
         btnNavigate.setOnClickListener {
-            val response = LogIn(inputName.text.toString(),inputPassword.text.toString())
+            val response = logIn(inputName.text.toString(),inputPassword.text.toString())
 
             if(response == "OK") {
                 val action = Screen1FragmentDirections.actionScreen1FragmentToScreen2Fragment()

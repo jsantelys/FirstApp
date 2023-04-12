@@ -1,5 +1,8 @@
 package com.utn.firstapp.entities
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 /*class User {
     var name: String
     var lastName: String
@@ -30,12 +33,12 @@ package com.utn.firstapp.entities
         const val MAX_AGE = 100                     //Investigate why const val
     }
 }*/
-
+@Parcelize
 class User (
     var name: String,
     var lastName: String,
     var email: String,
-    var password: String) : Greet {
+    var password: String) : Greet, Parcelable {
 
     var age: Int = 0
 
