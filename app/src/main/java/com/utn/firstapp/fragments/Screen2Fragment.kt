@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
 import com.utn.firstapp.adapters.ContactsAdapter
+import com.utn.firstapp.entities.Contact
 import com.utn.firstapp.entities.ContactsRepository
 import com.utn.firstapp.entities.User
 
@@ -42,6 +43,8 @@ class Screen2Fragment : Fragment() {
 
         adapter = ContactsAdapter(contactsRepository.contacts){ position ->
             Snackbar.make(v, "Clickee en ${contactsRepository.contacts[position].name}", Snackbar.LENGTH_SHORT).show()
+            val action = Screen2FragmentDirections.actionScreen2FragmentToContactDetailFragment(contactsRepository.contacts[position])
+            findNavController().navigate(action)
         }
         recContact.layoutManager = LinearLayoutManager(context)
         recContact.adapter= adapter

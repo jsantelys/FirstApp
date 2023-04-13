@@ -27,5 +27,9 @@
         android:id="@+id/contactDetailFragment"
         android:name="com.utn.firstapp.fragments.ContactDetailFragment"
         android:label="fragment_contact_detail"
-        tools:layout="@layout/fragment_contact_detail" />
+        tools:layout="@layout/fragment_contact_detail" >
+        <argument
+            android:name="contactInfo"
+            app:argType="com.utn.firstapp.entities.Contact" />
+    </fragment>
 </navigation>
