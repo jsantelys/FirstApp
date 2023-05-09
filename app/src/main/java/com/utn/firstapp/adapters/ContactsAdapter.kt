@@ -3,6 +3,7 @@ package com.utn.firstapp.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,8 @@ import com.utn.firstapp.entities.Contact
 
 class ContactsAdapter (
     var contactList: MutableList<Contact>,
-    var onClick : (Int) -> Unit
+    var onClick : (Int) -> Unit,
+    var onDelete : (Int) -> Unit
         ) : RecyclerView.Adapter<ContactsAdapter.ContactHolder>() {
 
             class ContactHolder (v: View) : RecyclerView.ViewHolder(v) {
@@ -31,6 +33,9 @@ class ContactsAdapter (
                 fun getCard() : CardView {
                     return view.findViewById(R.id.cardContact)
                 }
+                fun getDeleteButton(): ImageView {
+                    return view.findViewById(R.id.ivDeleteContact)
+                }
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactHolder {
@@ -43,6 +48,9 @@ class ContactsAdapter (
         holder.setPhoneNumber(contactList[position].phoneNumber)
         holder.getCard().setOnClickListener {
             onClick(position)
+        }
+        holder.getDeleteButton().setOnClickListener {
+            onDelete(position)
         }
     }
 
