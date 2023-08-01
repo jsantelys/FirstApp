@@ -17,7 +17,8 @@ Home:
 <img src='https://github.com/jsantelys/FirstApp/assets/95723611/b5d90029-7c62-45d2-8fa8-202cdade35f5' width='300px'>
 <img src='https://github.com/jsantelys/FirstApp/assets/95723611/dfc0df62-ffdb-4561-94fd-daf4931d03fd' width='300px'>
 
-    
+Change contact profile picture:
+
 <img src='https://github.com/jsantelys/FirstApp/assets/95723611/cb603672-5768-4d12-926a-b04649dce925' width='300px'>
 <img src='https://github.com/jsantelys/FirstApp/assets/95723611/ac685d8c-ffb5-4ea0-b5a5-43b049893895' width='300px'>
 
