@@ -4,7 +4,7 @@ A very simple to use App to save your contacts that uses Firebase Authentication
 
 Previews:
 Login:
-![image](https://github.com/jsantelys/FirstApp/assets/95723611/e936bed1-9fe2-4d5d-a89f-bcfb47cc0823)
+![image](https://github.com/jsantelys/FirstApp/assets/95723611/e936bed1-9fe2-4d5d-a89f-bcfb47cc0823=250x250)
 ![image](https://github.com/jsantelys/FirstApp/assets/95723611/b5d90029-7c62-45d2-8fa8-202cdade35f5)
 Home:
 ![image](https://github.com/jsantelys/FirstApp/assets/95723611/32ce612b-652a-4b21-9108-366308feb1c5)
